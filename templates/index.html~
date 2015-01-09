@@ -1,0 +1,43 @@
+<!Doctype HTML>
+<html>
+<head>
+    {% block head %}
+        <link rel="stylesheet" href="static/css/foundation.css">
+        <script src="static/js/vendor/modernizr.js"></script>
+        <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+
+</head>
+<body>
+    {% block menu %}
+      <div class="icon-bar three-up">
+          <a class="item" href="/">
+            <img src="static/img/fi-home.svg" >
+            <label>Home</label>
+          </a>
+          <a class="item" href="/add_contact">
+            <img src="static/img/fi-plus.svg" >
+            <label>Add Contact</label>
+          </a>
+          <a class="item" href="/contacts">
+            <img src="static/img/fi-address-book.svg" >
+            <label>Contacts</label>
+          </a>
+       </div>
+    {% endblock %}
+
+
+        <div class="row">         
+            <div class="large-12 columns" role="content">
+                {% block content %}
+                    <h1>Welcome to Contact Cards!</h1>
+                    <h3>Select an operation from the menu.</h3>
+                {% endblock %}
+            </div>
+        </div>
+
+
+
+</body>
+</html>
+

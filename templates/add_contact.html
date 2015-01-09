@@ -1,0 +1,97 @@
+{% extends "index.html" %}
+{% block title %}Add Contact{% endblock %}
+
+{% block content %}
+            <div class="large-8 columns" >
+    <h2>Add Contact</h2>
+    <form action="/add_contact" method="POST">
+    
+        <!--First Name-->
+        <div class="row collapse">
+            <div class="small-3 large-2 columns">
+              <span class="prefix">First Name</span>
+            </div>
+            <div class="small-9 large-10 columns">
+              <input type="text" name="first_name" placeholder="Enter First Name..." maxlength=100 required>
+            </div>
+        </div>
+
+        <!--Last Name-->
+        <div class="row collapse">
+            <div class="small-3 large-2 columns">
+              <span class="prefix">Last Name</span>
+            </div>
+            <div class="small-9 large-10 columns">
+              <input type="text" name="last_name" placeholder="Enter Last Name..." maxlength=100 required>
+            </div>
+        </div>
+
+        <!--Birthday-->
+        <div class="row collapse">
+            <div class="small-3 large-2 columns">
+              <span class="prefix">Birthday</span>
+            </div>
+            <div class="small-9 large-10 columns">
+              <input type="datetime-local" name="birthday" placeholder="Enter Birthday Date..." min="1900-01-01" max="2016-01-01">
+            </div>
+        </div>
+
+        <!--Email Address-->
+        <div class="row collapse">
+            <div class="small-3 large-2 columns">
+              <span class="prefix">Email Address</span>
+            </div>
+            <div class="small-9 large-10 columns">
+              <input type="email" name="email" placeholder="Enter Email Address..." maxlength=100 required>
+            </div>
+        </div>
+
+        <!--Website-->
+        <label>Website
+            <div class="row collapse">
+                <div class="small-3 large-2 columns">
+                  <span class="prefix">Website</span>
+                </div>
+                <div class="small-9 large-10 columns">
+                  <input type="url" name="website" value="http://" placeholder="Enter Website URL..." maxlength=150 required>
+                </div>
+            </div>
+        </label>
+
+        
+        <!--Work Phone-->
+        <div class="row collapse">
+            <div class="small-3 large-2 columns">
+              <span class="prefix">Work Phone</span>
+            </div>
+            <div class="small-9 large-10 columns">
+              <input type="tel" name="work_phone" placeholder="Enter Work Phone Number...">
+            </div>
+        </div>
+
+        <!--Home Phone-->
+        <div class="row collapse">
+            <div class="small-3 large-2 columns">
+              <span class="prefix">Home Phone</span>
+            </div>
+            <div class="small-9 large-10 columns">
+              <input type="tel" name="home_phone" placeholder="Enter Home Phone Number...">
+            </div>
+        </div>
+
+        <!--Mobile Phone-->
+        <div class="row collapse">
+            <div class="small-3 large-2 columns">
+              <span class="prefix">Mobile Phone</span>
+            </div>
+            <div class="small-9 large-10 columns">
+              <input type="tel" name="mobile_phone" placeholder="Enter Mobile Phone Number...">
+            </div>
+        </div>
+        <input type="submit" class="round button"/>
+        
+
+    </form>
+</div>
+
+{% endblock %}

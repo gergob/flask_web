@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+{% block title %}Contacts{% endblock %}
+
+{% block content %}
+    <h2>Contacts</h2>
+
+    {% if contacts %}
+       <p>There are {{ contacts | length }} contacts in the database.</p>        
+
+       {% if contacts|length > 0 %}
+       <table role="grid">
+         <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Birthday</th>
+            <th>Email</th>
+            <th>Website</th>
+            <th>Work Phone</th>
+            <th>Home Phone</th>
+            <th>Mobile Phone</th>
+          </tr>
+        {% for contact in contacts %}
+            <tr>
+            <td>{{ contact['first_name'] }}</td>
+            <td>{{ contact['last_name'] }}</td>
+            <td>{{ contact['birthday'] }}</td>
+            <td>{{ contact['email'] }}</td>
+            <td>{{ contact['website'] }}</td>
+            <td>{{ contact['work_phone'] }}</td>
+            <td>{{ contact['home_phone'] }}</td>
+            <td>{{ contact['mobile_phone'] }}</td>
+          </tr>
+        {% endfor %}
+       </table>        
+
+       {% endif %}
+    {% else %}
+        <p>No contacts in the database.</p>
+    {% endif %}
+
+{% endblock %}
