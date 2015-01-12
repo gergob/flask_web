@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% block title %}Login{% endblock %}
+
+{% block menu%} {% endblock %}
+
+{% block content %}
+
+<div class="large-3 large-centered columns login_header">
+  <div class="login-box">
+  <div class="row">
+  <div class="large-12 columns">
+    <form action="/login" method="POST" >
+       <div class="row">
+         <div class="large-12 columns">
+             <input type="text" name="username" placeholder="Username" required />
+         </div>
+       </div>
+      <div class="row">
+         <div class="large-12 columns">
+             <input type="password" name="password" placeholder="Password"  required />
+         </div>
+      </div>
+      <div class="row">
+        <div class="large-12 large-centered columns">
+          <input type="submit" class="button expand round" value="Log In"/>
+        </div>
+      </div>
+    </form>
+   
+  </div>
+</div>
+</div>
+ {% for message in get_flashed_messages() %}
+       <p class="login_message"> {{ message }} </p>
+    {% endfor %}
+</div>
+
+{% endblock %}
+
+

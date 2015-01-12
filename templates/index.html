@@ -31,13 +31,18 @@
         <div class="row">         
             <div class="large-12 columns" role="content">
                 {% block content %}
+
                     <h1>Welcome to Contact Cards!</h1>
                     <h3>Select an operation from the menu.</h3>
+                    {% for message in get_flashed_messages() %}
+                        <h5 > {{ message }} </h5>
+                    {% endfor %}
+                    <p> Press to <a href="/logout">logout</a>.</p>
+
                 {% endblock %}
+
             </div>
         </div>
-
-
 
 </body>
 </html>
